@@ -71,6 +71,9 @@
       cursor: pointer;
       font-size: 18px;
     }
+    .click-box::after {
+      content: \"\";
+    }
     .fade-message {
       margin-top: 20px;
       font-size: 20px;
@@ -93,7 +96,7 @@
 
   <div id="apologyScreen" class="screen">
     <p class="message">🙇‍♂️ sorry for the blank emails<br>That won't happen again</p>
-    <button class="click-box" onclick="showFadeMessage()"> </button>
+    <button class="click-box" onclick="showFadeMessage()"></button>
     <p id="fadeMsg" class="fade-message">on top of my head, maybe log off</p>
   </div>
 
@@ -111,12 +114,10 @@
     });
 
     function showFadeMessage() {
+      fadeMsg.classList.add('fade-in'); // Show message immediately
       setTimeout(() => {
-        fadeMsg.classList.add('fade-in');
-        setTimeout(() => {
-          fadeMsg.textContent = "yes, I get it, I'll stop";
-        }, 3000);
-      }, 2000);
+        fadeMsg.textContent = "yes, I get it, I'll stop"; // Update message after 3 sec
+      }, 3000);
     }
   </script>
 </body>
