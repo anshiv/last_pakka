@@ -71,9 +71,17 @@
       cursor: pointer;
       font-size: 18px;
     }
-    .click-box::after {
-      content: \"\";
-    }
+  .click-box {
+  position: absolute;
+  bottom: 60px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+}
     .fade-message {
       margin-top: 20px;
       font-size: 20px;
@@ -97,7 +105,7 @@
   <div id="apologyScreen" class="screen">
     <p class="message">🙇‍♂️ <br> sorry for the blank mails<br>That won't happen again</p>
     <button class="click-box" onclick="showFadeMessage()"></button>
-    <p id="fadeMsg" class="fade-message">on top of my head, maybe log off</p>
+    <p id="fadeMsg" class="fade-message">on top of my head,if applicable,log off</p>
   </div>
 
   <script>
