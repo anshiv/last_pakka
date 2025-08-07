@@ -92,6 +92,13 @@
     .fade-in {
       opacity: 1;
     }
+    .button-message-wrap {
+  position: absolute;
+  bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
   </style>
 </head>
 <body>
@@ -104,8 +111,11 @@
 
   <div id="apologyScreen" class="screen">
     <p class="message">🙇‍♂️ <br> sorry for the blank mails<br>That won't happen again</p>
-    <button class="click-box" onclick="showFadeMessage()"></button>
-    <p id="fadeMsg" class="fade-message">on top of my head,if applicable,log off</p>
+<div class="button-message-wrap">
+  <button class="click-box" onclick="showFadeMessage()"></button>
+  <p id="fadeMsg" class="fade-message">on top of my head,if applicable,log off</p>
+</div>
+
   </div>
 
   <script>
@@ -125,7 +135,7 @@
       fadeMsg.classList.add('fade-in'); // Show message immediately
       setTimeout(() => {
         fadeMsg.textContent = "yes, I get it, I'll stop"; // Update message after 3 sec
-      }, 3000);
+      }, 1500);
     }
   </script>
 </body>
